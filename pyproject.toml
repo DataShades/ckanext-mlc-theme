@@ -1,6 +1,6 @@
 [project]
 name = "ckanext-mlc-theme"
-version = "0.0.1"
+version = "1.0.0"
 description = "MLC theme"
 readme = "README.md"
 authors = [
@@ -25,7 +25,7 @@ Homepage = "https://github.com/DataShades/ckanext-mlc-theme"
 
 [project.entry-points."ckan.plugins"]
 mlc_theme = "ckanext.mlc_theme.plugin:MLCommonsThemePlugin"
-
+mlc_theme_override = "ckanext.mlc_theme_override.plugin:MLCommonsThemeOverridePlugin"
 
 [build-system]
 requires = ["setuptools"]

@@ -1,0 +1,14 @@
+# mlc_theme-js:
+#   filters: rjsmin
+#   output: ckanext-mlc_theme/%(version)s-mlc_theme.js
+#   contents:
+#     - js/mlc_theme.js
+#   extra:
+#     preload:
+#       - base/main
+
+# mlc_theme-css:
+#   filters: cssrewrite
+#   output: ckanext-mlc_theme/%(version)s-mlc_theme.css
+#   contents:
+#     - css/mlc_theme.css

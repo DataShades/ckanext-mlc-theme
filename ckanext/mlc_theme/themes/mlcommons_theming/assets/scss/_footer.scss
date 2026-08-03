@@ -1,0 +1,87 @@
+
+footer {
+    a {
+        color: $footerLinkColor;
+    }
+    .site-footer {
+        background: linear-gradient(89.47deg, #000000 -1.31%, #3E2723 99.54%);
+        color: $footerTextColor;
+        padding: 53px 0;
+
+        .footer-links {
+            padding-left: 12px;
+
+            ul {
+                margin: 0;
+                li {
+                    margin-bottom: 5px;
+                }
+            }
+        }
+    }
+    .bg-black {
+        background: linear-gradient(90deg, #000000 0%, #3E2723 100%);
+    }
+    .attribution {
+        p {
+            color: $footerTextColor;
+            font-size: $h5-font-size;
+            margin: auto;
+            padding: 1rem 0;
+        }
+    }
+    .lang-select {
+        max-width: 255px;
+        padding: 1rem 0;
+
+        .form-group {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+
+            .form-label {
+                color: var(--bs-white);
+                margin-bottom: 0;
+
+                &:after {
+                    display: none;
+                }
+            }
+
+            span.select2-container {
+                margin-top: 0;
+                min-height: unset;
+
+                .select2-selection--single {
+                    background-color: #4e403d;
+                    border: 1px solid #4e403d;
+                    padding: 0 0.5rem;
+                    min-height: unset;
+
+                    .select2-selection__rendered {
+                        color: var(--bs-white);
+                    }
+
+                    .select2-selection__arrow {
+                        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M2 5l6 6 6-6' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+                    }
+                }
+            }
+        }
+    }
+    .ckan-footer-logo {
+        display: block;
+        margin-bottom: 1rem;
+    }
+
+    @include media-breakpoint-up(sm) {
+        .site-footer {
+            border-bottom: 1px solid var(--mlc-text-muted);
+            padding: 2rem 0;
+
+            .footer-links {
+                margin-left: 0;
+            }
+        }
+    }
+}

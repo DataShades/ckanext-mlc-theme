@@ -1,0 +1,23 @@
+.resource-item.resource-item--scp {
+    display: flex;
+    justify-content: flex-start;
+    color: var(--mlc-text-primary);
+    font-weight: 600;
+    padding: 10px;
+    align-items: center;
+
+    .folder-icon {
+        width: 32px;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 4px;
+        background: #f1d7c4;
+        margin-right: 18px;
+    }
+
+    .item-text {
+        margin-right: 8px;
+    }
+}

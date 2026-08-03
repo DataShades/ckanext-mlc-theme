@@ -1,16 +1,11 @@
-import ckan.plugins as plugins
-import ckan.plugins.toolkit as toolkit
+import ckan.plugins as p
+
+from ckanext.theming.interfaces import ITheme
+from ckanext.theming.lib import Theme
+
+from .themes.mlcommons_theming.theme import make_theme
 
 
-class MlcThemePlugin(plugins.SingletonPlugin):
-    plugins.implements(plugins.IConfigurer)
-    
-
-    # IConfigurer
-
-    def update_config(self, config_):
-        toolkit.add_template_directory(config_, "templates")
-        toolkit.add_public_directory(config_, "public")
-        toolkit.add_resource("assets", "mlc_theme")
-
-    
+class MLCommonsThemePlugin(p.SingletonPlugin, ITheme):
+    def register_themes(self) -> list[Theme]:
+        return [make_theme()]

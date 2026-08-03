@@ -1,0 +1,159 @@
+@each $name, $color in $theme-colors {
+    .btn-#{$name}-outline {
+        border: solid 2px $color;
+        background-color: $white;
+        color: $color;
+        &:hover {
+            background-color: $color;
+            color: $white
+        }
+    }
+}
+
+.btn {
+    --bs-btn-padding-y: 11px;
+    --bs-btn-padding-x: 17px;
+    --bs-btn-border-radius: 8px;
+
+    display: inline-flex;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    @include box-shadow(none);
+
+    &.btn-sm {
+        --bs-btn-padding-y: 4.5px;
+        --bs-btn-padding-x: 8px;
+    }
+
+    &.btn-primary {
+        color: var(--bs-white);
+        background-color: var(--mlc-accent-default);
+        border-color: var(--mlc-accent-default);
+
+        &:hover, &:focus, &:active, &:focus-visible {
+            background-color: var(--mlc-accent-hover);
+            border-color: var(--mlc-accent-hover);
+        }
+
+        &:disabled {
+            background-color: var(--mlc-bg-secondary);
+        }
+    }
+
+    &.btn-primary-outline {
+        color: var(--mlc-accent-default);
+        background-color: transparent;
+        border-color: var(--mlc-accent-default);
+        border-width: 1px;
+
+        &:hover, &:focus, &:active, &:focus-visible {
+            color: var(--bs-white);
+            background-color: var(--mlc-accent-hover);
+            border-color: var(--mlc-accent-hover);
+        }
+
+        &:disabled {
+            background-color: var(--mlc-bg-secondary);
+        }
+    }
+
+    &.btn-danger-outline {
+        color: var(--mlc-color-error);
+        background-color: transparent;
+        border-color: var(--mlc-color-error);
+        border-width: 1px;
+
+        &:hover, &:focus, &:active, &:focus-visible {
+            color: var(--bs-white);
+            background-color: var(--mlc-color-error);
+            border-color: var(--mlc-color-error);
+        }
+
+        &:disabled {
+            color: var(--mlc-text-muted);
+            background-color: transparent;
+            border-color: var(--mlc-bg-secondary);
+        }
+    }
+
+    &.btn-secondary {
+        @include btn-secondary;
+    }
+
+    &.btn-secondary-outline {
+        @include btn-secondary;
+        background-color: transparent;
+    }
+
+    // TODO: are we not breaking anything?
+    &.btn-light,
+    &.btn-success,
+    &.btn-default {
+        @include btn-secondary;
+    }
+
+    &.btn-repeating-remove {
+        @include btn-remove;
+    }
+
+    &.btn-link {
+        text-decoration-thickness: 1px;
+        padding: 10px 16px;
+
+        --bs-btn-color: var(--mlc-text-primary);
+        --bs-btn-bg: transparent;
+        --bs-btn-border-color: var(--mlc-border-default);
+        --bs-btn-hover-color: var(--mlc-text-primary);
+        --bs-btn-active-color: var(--mlc-text-primary);
+        --bs-btn-hover-border-color: var(--mlc-border-default);
+        --bs-btn-active-border-color: var(--mlc-border-default);
+        --bs-btn-disabled-color: var(--mlc-text-muted);
+        --bs-btn-disabled-border-color: var(--mlc-border-default);
+    }
+
+    &.files--no-after-content {
+        @include btn-md;
+    }
+}
+
+button.btn.btn-remove-url {
+    @include btn-remove;
+
+    position: absolute;
+    transform: translateY(30%);
+    right: math.div($grid-gutter-width, 6);
+    bottom: 14px;
+
+    .icon-remove {
+        margin-right: 0;
+    }
+}
+
+.scheming-fieldset .multiple-text-group a.btn.btn-multiple-remove {
+    @include btn-remove;
+    top: 4px;
+}
+
+input[id^=lang-].btn-check + label.btn {
+    &::after {
+        content: none;
+    }
+    &:hover {
+        color: $gray-800;
+    }
+}
+
+.btn-group {
+  > .btn:first-child {
+    padding-right: 0.5rem;
+  }
+}
+
+// ckanext-tables control buttons
+.table-control {
+    button.btn.btn-light i,
+    button.btn.btn-default i {
+        color: var(--mlc-text-primary);
+    }
+}

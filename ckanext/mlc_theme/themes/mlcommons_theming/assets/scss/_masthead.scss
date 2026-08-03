@@ -1,0 +1,240 @@
+$notificationsBg: #CF1322;
+
+.account-masthead {
+    @extend .clearfix;
+    min-height: 30px;
+    color: var(--mlc-text-secondary);
+    background: var(--mlc-bg-primary);
+
+    .account {
+        float: right;
+
+        >ul {
+            display: inline-flex;
+            align-items: baseline;
+            flex-wrap: wrap;
+
+            li {
+                display: block;
+                float: left;
+                padding: .5rem 0;
+
+                a,
+                button {
+                    display: block;
+                    text-decoration: none;
+                    font-size: 14px;
+                    padding: 6px 10px;
+                    margin-left: .5rem;
+
+                    span.username,
+                    span.text {
+                        margin: 0 2px 0 4px;
+                    }
+
+                    span.text {
+                        position: absolute;
+                        top: -9999px;
+                        left: -9999px;
+                    }
+
+                    &.sub {
+                        font-weight: 300;
+                    }
+                }
+
+                a.dropdown-item {
+                    margin-left: 0;
+                }
+
+                a.image {
+                    background-color: var(--bs-white);
+                    color: var(--mlc-text-primary);
+                    border: 1px solid var(--mlc-border-light);
+
+                    &:hover {
+                        background-color: var(--mlc-bg-tertiary);
+                    }
+                }
+            }
+        }
+
+        .notifications {
+            a {
+                span.badge {
+                    font-size: 12px;
+                    margin-left: 3px;
+                    padding: 1px 6px;
+                    background-color: darken($mastheadBackgroundColor, 15%);
+                    @include border-radius(4px);
+                    text-shadow: none;
+                    color: mix($mastheadBackgroundColor, $mastheadLinkColor, 25%);
+                }
+
+                &:hover span {
+                    color: $mastheadLinkColor;
+                    background-color: darken($mastheadBackgroundColor, 20%);
+                }
+            }
+
+            &.notifications-important a {
+                span.badge {
+                    color: var(--bs-white);
+                    border: 1px solid $notificationsBg;
+                    background-color: $notificationsBg;
+                }
+            }
+        }
+
+        &.authed {
+            .image {
+                @include border-radius(8px);
+                img {
+                    @include border-radius(4px);
+                }
+            }
+        }
+    }
+}
+
+.masthead {
+    background: var(--mlc-bg-primary);
+    border-bottom: var(--mlc-border-default) 1px solid;
+    @extend .p-2;
+
+    .debug {
+        display: none;
+    }
+
+    .navbar {
+        hgroup {
+
+            h1,
+            h2 {
+                float: left;
+                font-size: 30px;
+                line-height: 1.5;
+            }
+
+            h1 {
+                font-weight: 900;
+                letter-spacing: -1px;
+                margin: 3px 0;
+            }
+
+            h2 {
+                position: absolute;
+                bottom: -3px;
+                left: 0;
+                margin: 0;
+                font-size: 15px;
+                font-weight: normal;
+                line-height: 1.2;
+                white-space: nowrap;
+            }
+        }
+
+        .logo {
+            display: inline-block;
+
+            img {
+                max-height: $logoMaxHeight;
+                min-height: $logoMinHeight;
+                vertical-align: unset;
+            }
+        }
+    }
+
+    .main-navbar {
+        ul {
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 10px 0;
+
+            @include media-breakpoint-up(lg) {
+                gap: 24px
+            }
+
+            li {
+                margin-right: 2px;
+
+                a {
+                    padding: ($spacer * .6) ($spacer * .9);
+                    color: $black;
+                    text-decoration: none;
+                    margin-bottom: $spacer-1;
+                }
+
+                &:hover,
+                &:focus,
+                &.active {
+                    a {
+                        border-radius: $border-radius-sm;
+                        background-color: var(--mlc-bg-tertiary);
+                        color: var(--mlc-text-primary);
+                    }
+                }
+            }
+        }
+    }
+
+    .login {
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+
+@include media-breakpoint-down(lg) {
+    .masthead {
+        .main-navbar {
+            ul {
+                padding: 20px 0 0;
+
+                li {
+                    padding: 0;
+
+                    a {
+                        display: block;
+                        padding: $nav-link-padding-y $nav-link-padding-x;
+                        @include font-size($nav-link-font-size);
+                        font-weight: $nav-link-font-weight;
+                        color: $brand-900;
+                        text-decoration: if($link-decoration ==none, null, none);
+                        @include transition($nav-link-transition);
+
+                        &:hover,
+                        &:focus {
+                            color: $black;
+                            text-decoration: if($link-hover-decoration ==underline, none, null);
+                        }
+
+                        &.disabled {
+                            color: $nav-link-disabled-color;
+                            pointer-events: none;
+                            cursor: default;
+                        }
+                    }
+                }
+            }
+        }
+
+        .login {
+            justify-content: flex-start;
+        }
+    }
+}
+
+.navbar-toggler:focus {
+    box-shadow: var(--mlc-status-default);
+}
+
+#main-navigation-toggle {
+
+    .navbar-nav .nav-item a {
+        color: var(--mlc-text-primary);
+    }
+
+    &>li {
+        display: none;
+    }
+}

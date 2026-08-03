@@ -1,0 +1,28 @@
+#admin-panel {
+    font-family: var(--bs-body-font-family);
+
+    .navbar .nav-item {
+        line-height: 18px;
+
+        .nav-link {
+            padding: 9px 13px;
+
+            i {
+                color: var(--mlc-icon-color);
+
+                &.fa-tachometer::before {
+                    content: "\f624";
+                }
+            }
+        }
+
+        &.nav-item-home {
+            &:hover, &:focus, &.active {
+                background-color: var(--mlc-accent-hover);
+            }
+            .nav-link i {
+                color: var(--bs-white);
+            }
+        }
+    }
+}

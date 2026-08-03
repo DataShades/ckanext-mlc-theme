@@ -1,0 +1,13 @@
+.badge {
+    border-radius: 4px;
+
+    &.text-bg-info {
+        color: var(--mlc-text-primary) !important;
+        background-color: #ded5d1 !important;
+    }
+
+    &.bg-secondary {
+       color: var(--mlc-text-primary);
+       background-color: #eace8b !important;
+    }
+}

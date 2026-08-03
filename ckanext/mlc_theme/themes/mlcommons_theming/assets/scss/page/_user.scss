@@ -1,0 +1,26 @@
+#user-info {
+    .nums {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .user-image {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+.mlc-user-api-tokens {
+    .form-control {
+        border-width: 2px;
+    }
+
+    #api-tokens-table {
+        thead {
+            border-bottom-width: 2px;
+        }
+
+        .form-group {
+            margin-bottom: 0;
+        }
+    }
+}

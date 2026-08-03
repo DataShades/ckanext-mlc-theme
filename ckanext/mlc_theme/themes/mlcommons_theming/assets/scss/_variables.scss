@@ -1,0 +1,233 @@
+// Base variables
+$imagePath: "../../../images";
+
+// Layout Variables
+$layoutFontFamily: "Mona Sans", system-ui, sans-serif;
+$layoutTextColor: var(--mlc-text-secondary);
+$layoutBoldColor: var(--mlc-text-primary);
+$layoutLinkColor: $primary;
+$layoutBackgroundColor: var(--mlc-bg-secondary);
+$layoutTrimBackgroundColor: $white;
+$layoutTrimBorderColor: $gray-400;
+$layoutPrimaryBackgroundColor: var(--mlc-bg-secondary);
+$logoMaxHeight: 60px;
+$logoMinHeight: 48px;
+
+$navLinkColor: var(--mlc-text-primary);
+$navActiveBackgroundColor: var(--mlc-bg-secondary);
+
+// Module Variables
+$moduleBackgroundColor: #fff;
+$moduleHeadingBorderColor: #ddd;
+$moduleHeadingBackgroundColor: #f6f6f6;
+$moduleHeadingActionTextColor: #888;
+$moduleExpandedBackgroundColor: rgba(255, 255, 255, 0.9);
+
+$tabTextColor: var(--mlc-text-primary);
+$tagBackgroundColor: #f6f6f6;
+
+$gutterX: 25px;
+$gutterY: 20px;
+$gutterSmallX: 15px;
+$gutterSmallY: $gutterY;
+
+$emptyTextColor: var(--mlc-text-muted);
+$genericBorderColor: var(--mlc-border-default);
+
+$breadcrumbTextColor: var(--mlc-text-muted);
+
+$mastheadTextColor: $black;
+$mastheadLinkColor: $mastheadTextColor;
+$mastheadBackgroundColor: $white;
+
+$navItemActiveTextColor: var(--mlc-accent-hover);
+$navItemActiveBackgroundColor: $gray-500;
+$navItemActiveArrowSize: $spacer-1;
+
+$pillTextColor: var(--mlc-accent-default);
+$pillBackgroundColor: darken($navItemActiveBackgroundColor, 10%);
+
+$footerBackgroundColor: $brand-700;
+$footerTextColor: $white;
+$footerLinkColor: $footerTextColor;
+
+$inputColor: $black;
+$inputBackground: $body-bg;
+$inputBorder: #ccc;
+$inputBorderRadius: 6px;
+$disabledCustomInputTextColor: #aaa;
+$disabledCustomInputBackground: #f3f3f3;
+
+$highlightBackground: #fdf7e9;
+$highlightHoverBackground: #fdf3d9;
+
+// Forms
+
+$errorText: var(--mlc-color-error);
+$errorBackground: var(--mlc-bg-tertiary);
+$errorBorder: var(--mlc-color-error);
+
+$stagesTextColor: #aeaeae;
+$stagesBackground: #EDEDED;
+$stagesTransparentBackground: rgba(237, 237, 237, 0); // Used for arrows.
+$stagesActiveTextColor: var(--mlc-text-primary);
+$stagesActiveBackground: #8cc68a;
+$stagesActiveTransparentBackground: rgba(140, 198, 138, 0);
+$stagesCompleteTextColor: #eef6ed;
+$stagesCompleteBackground: #c5e2c4;
+$stagesCompleteTransparentBackground: rgba(197, 226, 196, 0);
+$stagesCounterTextColor: #fff;
+$stagesCounterBackground: #aeaeae;
+$stagesCounterActiveTextColor: #8cc68a;
+$stagesCounterActiveBackground: #fff;
+$stagesCounterCompleteTextColor: #c5e2c4;
+$stagesCounterCompleteBackground: #eef6ed;
+
+$codeTextColor: #000;
+
+
+// Datasets
+
+$listingHeadingTextColor: $gray-700;
+$resourceFormatBackground: $gray-500;
+
+// Table
+
+$chunkyTableHeaderTextColor: #fff;
+$chunkyTableHeaderBackgroundColor: #aaa;
+$chunkyTableStripeBackgroundColor: #f2f2f2;
+
+// Twitter Bootstrap Overrides
+$bodyBackground: $layoutBackgroundColor;
+$btnBackground: #ffffff;
+$btnBackgroundHighlight: #eaeaea;
+$btnPrimaryBackground: #30778d;
+$btnPrimaryBackgroundHighlight: #085871;
+$baseFontFamily: $layoutFontFamily;
+$textColor: $layoutTextColor;
+$linkColor: $layoutLinkColor;
+$iconSpritePath: "../images/bootstrap-glyphicons-halflings.png";
+$iconWhiteSpritePath: "../images/bootstrap-glyphicons-halflings-white.png";
+
+// Navigation
+$zindex-navbar: 1;
+
+// Icons
+$chevronActiveIcon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{var(--mlc-text-primary)}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>");
+$removeStateIcon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'><path d='M8 12H16M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z' stroke='#CC5500' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+$addStateIcon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'><path d='M12 8V16M8 12H16M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z' stroke='#3E2723' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+
+
+body {
+    // background colors
+    --mlc-bg-primary: #FAF8F5;
+    --mlc-bg-secondary: #F2EFEA;
+    --mlc-bg-tertiary: #EAE0D5;
+
+    // text colors
+    --mlc-text-primary: #3E2723;
+    --mlc-text-secondary: #5E503F;
+    --mlc-text-muted: #8D6E63;
+
+    --mlc-color-error: #A41F13;
+
+    // border colors
+
+    --mlc-border-default: #EAE0D5;
+    --mlc-border-light: #D5C9BC;
+
+    // accent colors
+    --mlc-accent-default: #CC5500;
+    --mlc-accent-hover: #A34400;
+
+    // status shadow
+    --mlc-status-default: 0px 8px 24px 0px #3E27231A;
+    --mlc-status-heavy: 0px 16px 32px 0px #3E272333;
+    --mlc-status-overlay: 0px 24px 48px 0px #3E272380;
+
+    --mlc-icon-color: var(--mlc-text-secondary);
+
+    // bootstrap variables #####################################
+    --bs-body-font-family: "Mona Sans", system-ui, sans-serif;
+    --bs-heading-color: var(--mlc-text-primary);
+    --bs-body-color: var(--mlc-text-primary);
+    --bs-code-color: var(--mlc-text-secondary);
+    --bs-nav-link-hover-color: var(--mlc-text-primary);
+    // RGB channel triplets: --bs-link-color-rgb feeds rgba(var(--bs-link-color-rgb), ...)
+    --bs-link-color-rgb: 94, 80, 63; // --mlc-text-secondary (#5E503F)
+    --bs-link-hover-color-rgb: 141, 110, 99; // --mlc-text-muted (#8D6E63)
+
+    // admin panel styles ########################################
+    --ap-toolbar-bg: #f5f5f5;
+    --ap-toolbar-border: var(--mlc-border-default);
+    --ap-toolbar-color: var(--mlc-text-primary);
+    --ap-toolbar-home-btn-bg: var(--mlc-accent-default);
+    --ap-toolbar-home-btn-border: var(--ap-toolbar-home-btn-bg);
+    --ap-nav-item-bg-hover: var(--mlc-bg-tertiary);
+}
+
+// Bootstrap redeclares these directly on the component root, so a body-level
+// override is shadowed — they must be set on the same selector Bootstrap uses.
+.dropdown-menu {
+    --bs-dropdown-bg: var(--mlc-bg-primary);
+    --bs-dropdown-link-color: var(--mlc-text-primary);
+    --bs-dropdown-link-hover-bg: var(--mlc-bg-tertiary);
+    --bs-dropdown-box-shadow: var(--mlc-status-default);
+}
+
+.navbar {
+    --bs-navbar-color: var(--mlc-text-primary);
+    --bs-navbar-toggler-border-color: var(--mlc-border-light);
+}
+
+.badge {
+    --bs-badge-padding-x: 8px;
+    --bs-badge-padding-y: 5px;
+}
+
+.accordion-item {
+    --bs-accordion-color: var(--mlc-text-primary);
+}
+
+.text-primary {
+    --bs-primary-rgb: var(--mlc-text-primary);
+}
+
+.nav {
+    --bs-nav-link-color: var(--mlc-text-secondary);
+    --bs-nav-link-hover-color: var(--mlc-text-primary);
+    --bs-nav-tabs-link-active-border-color: var(--mlc-border-default);
+    --bs-nav-tabs-border-color: var(--mlc-border-default);
+    --bs-nav-tabs-link-active-bg: none;
+    --bs-nav-tabs-link-active-color: var(--mlc-text-primary);
+}
+
+.list-group {
+  --bs-list-group-color: var(--mlc-text-primary);
+  --bs-list-group-bg: var(--bs-white);
+  --bs-list-group-border-color: var(--mlc-border-default);
+
+  --bs-list-group-action-color: var(--mlc-text-secondary);
+  --bs-list-group-action-hover-color: var(--mlc-text-primary);
+  --bs-list-group-action-hover-bg: var(--mlc-bg-secondary);
+
+  --bs-list-group-action-active-color: var(--mlc-text-primary);
+  --bs-list-group-action-active-bg: var(--mlc-bg-tertiary);
+
+  --bs-list-group-disabled-color: var(--mlc-text-muted);
+  --bs-list-group-disabled-bg: var(--mlc-bg-primary);
+
+  --bs-list-group-active-color: var(--mlc-text-primary);
+  --bs-list-group-active-bg: var(--mlc-bg-tertiary);
+  --bs-list-group-active-border-color: var(--mlc-bg-tertiary);
+}
+
+.popover {
+  --bs-popover-bg: var(--mlc-bg-primary);
+  --bs-popover-border-color: var(--mlc-border-default);
+  --bs-popover-box-shadow: var(--mlc-status-default);
+  --bs-popover-header-bg: var(--mlc-bg-secondary);
+  --bs-popover-header-color: var(--mlc-text-primary);
+  --bs-popover-body-color: var(--mlc-text-primary);
+  --bs-popover-arrow-border: var(--mlc-border-default);
+}

@@ -1,0 +1,240 @@
+$ka-chat-icon: url("data:image/svg+xml,%3Csvg width='19' height='18' viewBox='0 0 19 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3Cpath d='M15 2.67865e-07C15.1738 6.96239e-05 15.3433 0.0544954 15.4846 0.155658C15.626 0.256821 15.7322 0.399656 15.7883 0.564167L15.8967 0.879167C16.1467 1.61167 16.7217 2.1875 17.455 2.4375L17.7692 2.545C17.9335 2.60131 18.0761 2.70757 18.1771 2.84891C18.2781 2.99026 18.3324 3.15962 18.3324 3.33333C18.3324 3.50704 18.2781 3.67641 18.1771 3.81776C18.0761 3.9591 17.9335 4.06536 17.7692 4.12167L17.4542 4.23C16.7217 4.48 16.1458 5.055 15.8958 5.78833L15.7883 6.1025C15.732 6.26683 15.6258 6.40945 15.4844 6.51043C15.3431 6.61141 15.1737 6.6657 15 6.6657C14.8263 6.6657 14.6569 6.61141 14.5156 6.51043C14.3742 6.40945 14.268 6.26683 14.2117 6.1025L14.1033 5.7875C13.9799 5.42595 13.7753 5.09749 13.5051 4.82736C13.235 4.55722 12.9066 4.35258 12.545 4.22917L12.2308 4.12167C12.0665 4.06536 11.9239 3.9591 11.8229 3.81776C11.7219 3.67641 11.6676 3.50704 11.6676 3.33333C11.6676 3.15962 11.7219 2.99026 11.8229 2.84891C11.9239 2.70757 12.0665 2.60131 12.2308 2.545L12.5458 2.43667C13.2783 2.18667 13.8542 1.61167 14.1042 0.878334L14.2117 0.564167L14.2633 0.4425C14.3343 0.30878 14.4404 0.196932 14.5702 0.11897C14.7 0.0410081 14.8486 -0.000121108 15 2.67865e-07ZM15 2.66333C14.8029 2.91142 14.5781 3.1362 14.33 3.33333C14.5794 3.53056 14.8028 3.75361 15 4.0025C15.1978 3.75417 15.4208 3.53111 15.6692 3.33333C15.4214 3.13615 15.1969 2.91137 15 2.66333ZM5 15L6.77833 13.6667C7.0666 13.4505 7.41717 13.3335 7.7775 13.3333H14.1667C14.3877 13.3333 14.5996 13.2455 14.7559 13.0893C14.9122 12.933 15 12.721 15 12.5V9.16667C15 8.94565 15.0878 8.73369 15.2441 8.57741C15.4004 8.42113 15.6123 8.33333 15.8333 8.33333C16.0543 8.33333 16.2663 8.42113 16.4226 8.57741C16.5789 8.73369 16.6667 8.94565 16.6667 9.16667V12.5C16.6667 13.163 16.4033 13.7989 15.9344 14.2678C15.4656 14.7366 14.8297 15 14.1667 15H7.7775L5 17.0833C4.31333 17.5983 3.33333 17.1083 3.33333 16.25V15H2.5C1.83696 15 1.20107 14.7366 0.732233 14.2678C0.263392 13.7989 0 13.163 0 12.5V4.16667C0 3.50363 0.263392 2.86774 0.732233 2.3989C1.20107 1.93006 1.83696 1.66667 2.5 1.66667H9.16667C9.38768 1.66667 9.59964 1.75446 9.75592 1.91074C9.9122 2.06702 10 2.27899 10 2.5C10 2.72101 9.9122 2.93298 9.75592 3.08926C9.59964 3.24554 9.38768 3.33333 9.16667 3.33333H2.5C2.27899 3.33333 2.06702 3.42113 1.91074 3.57741C1.75446 3.73369 1.66667 3.94565 1.66667 4.16667V12.5C1.66667 12.721 1.75446 12.933 1.91074 13.0893C2.06702 13.2455 2.27899 13.3333 2.5 13.3333H3.75C4.08152 13.3333 4.39946 13.465 4.63388 13.6995C4.8683 13.9339 5 14.2518 5 14.5833V15Z' fill='white'/%3E %3C/svg%3E");
+
+@mixin ka-chat-icon($size-w, $size-h: $size-w) {
+    content: "";
+    display: inline-block;
+    width: $size-w;
+    height: $size-h;
+    flex-shrink: 0;
+    background-color: currentColor;
+    -webkit-mask: $ka-chat-icon no-repeat center / contain;
+    mask: $ka-chat-icon no-repeat center / contain;
+}
+
+#ka-fab {
+    border-radius: 50%;
+    background: linear-gradient(45deg, #CC5500 15.65%, #DAA520 86.14%);
+    padding: 0;
+    width: 56px;
+    color: var(--bs-white);
+
+    > svg:first-child {
+        display: none;
+    }
+
+    &::before {
+        @include ka-chat-icon(22px);
+    }
+
+    &:hover {
+        box-shadow: var(--mlc-status-default)
+    }
+
+    @media (max-width: 480px) {
+        width: 56px;
+        height: 56px;
+
+        .ka-fab-icon {
+            width: initial;
+            height: initial;
+        }
+    }
+}
+
+#knowledge-assistant-modal.active {
+    .ka-login-prompt {
+        color: var(--mlc-text-primary);
+    }
+
+    &.ka-modal-anon .ka-chat-history {
+        background: var(--bs-white);
+    }
+
+    .ka-header {
+        background: linear-gradient(88.32deg, #000000 -0.51%, #3E2723 66.55%);
+
+        .ka-title {
+            font-size: 14px;
+
+            > svg:first-child {
+                display: none;
+            }
+
+            &::before {
+                @include ka-chat-icon(19px, 18px);
+            }
+        }
+    }
+
+    .ka-chat-history {
+        background: var(--mlc-bg-secondary);
+
+        .ka-message {
+            border-color: var(--mlc-border-default);
+            box-shadow: none;
+
+            &.ka-message-bot {
+                color: var(--mlc-text-primary);
+            }
+
+            &.ka-message-user {
+                background: #ebd0bb;
+                color: var(--mlc-text-primary);
+            }
+
+            .ka-thinking-spinner {
+                border-color: var(--mlc-bg-tertiary);
+                border-top-color: var(--mlc-accent-default);
+            }
+
+            .ka-thinking-text {
+                color: var(--mlc-text-muted);
+            }
+        }
+
+        .ka-suggested-queries {
+            border-color: var(--mlc-border-default);
+
+            .ka-suggested-queries-label {
+                color: var(--mlc-text-primary);
+            }
+
+            .ka-suggested-query-btn {
+                color: var(--mlc-text-secondary);
+                border-top: 1px solid var(--mlc-border-default);
+
+                &:hover {
+                    color: var(--mlc-text-muted);
+                }
+            }
+
+            .ka-suggested-query-text {
+                font-weight: 600;
+            }
+        }
+    }
+
+    .ka-input-area {
+        border-top: 1px solid var(--mlc-border-default);
+
+        .ka-input {
+            border-color: var(--mlc-border-default);
+        }
+
+        .ka-send-btn {
+            background: var(--mlc-accent-default);
+
+            &:hover, &:focus, &:active {
+                background-color: var(--mlc-accent-hover);
+                border-color: var(--mlc-accent-hover);
+            }
+        }
+    }
+}
+
+.ka-semantic-suggestions {
+    h4.ka-semantic-suggestions__heading {
+        display: none
+    }
+
+    .ka-semantic-suggestions__list {
+        .dataset-item:last-of-type {
+            border-bottom: 1px solid var(--mlc-border-default);
+        }
+    }
+}
+
+
+.ka-search-summary.ka-visible {
+    background: var(--mlc-bg-secondary);
+
+    .ka-search-summary__header {
+        color: var(--mlc-text-primary);
+        text-transform: unset;
+
+        .ka-search-summary__controls {
+            .ka-search-summary__toggle,
+            .btn-close {
+                color: var(--mlc-text-muted);
+            }
+
+            .btn-close {
+                font-size: 0.75rem;
+            }
+        }
+    }
+
+    .ka-search-summary__body {
+        .ka-cite {
+            color: var(--mlc-text-secondary);
+
+            &:hover {
+                color: var(--mlc-text-muted);
+                text-decoration: unset;
+            }
+        }
+    }
+}
+
+.badge.ka-similarity-badge  {
+    background-color: color-mix(in srgb, var(--mlc-accent-default) 20%, transparent) !important;
+    color: var(--mlc-accent-default);
+    font-size: 1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+
+    .fa {
+        font-size: 5px;
+        display: inline-flex;
+        vertical-align: center;
+
+        &::before {
+            content: "\f111";
+        }
+    }
+}
+
+
+button.btn.ka-suggest-btn {
+    color: var(--mlc-accent-default);
+    border: none;
+    margin-left: 0.5rem;
+    top: -1px;
+
+    &:hover, &:focus, &:active, &:focus-visible {
+        color: var(--mlc-accent-hover);
+        background: none;
+        border: none;
+        text-decoration: unset;
+    }
+}
+
+div.ka-fill-all-container {
+    background: var(--mlc-bg-secondary);
+    padding: 1rem;
+    border: 1px dotted var(--mlc-border-default);
+    border-radius: 0.5rem;
+
+    #ka-fill-all-btn {
+        @include btn-md;
+    }
+}
+
+.ka-skeleton .ka-skeleton__line {
+    --base: var(--mlc-bg-tertiary);
+    --highlight: color-mix(in srgb, var(--base), white 12%);
+
+    background: linear-gradient(
+        90deg,
+        var(--base) 25%,
+        var(--highlight) 50%,
+        var(--base) 75%
+    );
+
+    background-size: 200% 100%;
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+}

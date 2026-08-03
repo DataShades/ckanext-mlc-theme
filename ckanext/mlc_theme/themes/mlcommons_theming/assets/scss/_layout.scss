@@ -1,0 +1,202 @@
+.main {
+    padding: 20px 0;
+    background-color: var(--mlc-bg-primary);
+}
+
+
+.main .primary {
+    border-radius: 20px;
+    background-color: var(--mlc-bg-primary);
+}
+
+.main .secondary {
+    z-index: 1;
+}
+
+
+/* Filters modal */
+
+.no-text .text {
+    display: none;
+}
+
+.js body.filters-modal {
+    overflow: hidden;
+}
+
+.show-filters.btn {
+    background-color: $gray-50;
+    font-weight: 500;
+}
+
+.show-filters.btn,
+.hide-filters {
+    display: none;
+}
+
+@include media-breakpoint-down(md) {
+    .js .main .secondary .filters {
+        display: none;
+        position: fixed;
+        overflow: auto;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1000;
+        padding: 40px 10px 0;
+        background-color: $white;
+    }
+    .js body.filters-modal .secondary .filters {
+        display: block;
+    }
+    .js .main .secondary .filters>div {
+        background-color: #fff;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+        overflow: hidden;
+        padding: 0 10px;
+    }
+    .js body.filters-modal .secondary .filters .hide-filters {
+        display: inline-block;
+        position: absolute;
+        top: 14px;
+        right: 17px;
+        i {
+            font-size: 24px;
+        }
+    }
+    .js .show-filters.btn {
+        display: inline-block;
+    }
+}
+
+.primary {
+    .primary {
+        float: left;
+        margin-left: 0;
+        margin-bottom: 20px;
+        h1,
+        h2,
+        h3,
+        h4 {
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+    }
+}
+
+.hero:after {
+    // Need to manually declare this here@mixin  If you pass rgba() through to
+    // #gradient it breaks the filter property in IE7.
+   @include rgba-vertial-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0));
+    background-color: $moduleHeadingBackgroundColor;
+    border-bottom: 1px solid darken($moduleHeadingBorderColor, 5%);
+    @include border-radius(3px 3px 0 0);
+    @include box-shadow(inset 0 -4px 0 rgba(0,0,0,0.03));
+    .back:hover {
+        text-decoration: none;
+        span {
+            text-decoration: underline;
+        }
+    }
+}
+
+.context-info {
+    width: 100%;
+
+    .image-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .module-content {
+        padding: 0 0 1rem 0;
+    }
+    .image {
+        margin-bottom: 10px;
+    }
+    .description {
+        word-wrap: break-word;
+        overflow: visible;
+    }
+    code {
+        display: block;
+        font-weight: normal;
+        padding: 0;
+        margin: 0;
+        overflow: auto;
+    }
+    h1.heading, span.heading {
+        margin: 0 0 5px 0;
+        font-size: 18px;
+        line-height: 1.3;
+        font-weight: 600;
+        @include break-word();
+    }
+    .info {
+        padding-top: 10px;
+        word-break: break-word;
+        dl dd {
+            margin-top: 3px;
+            margin-left: 0;
+        }
+    }
+    .nums {
+        display: grid;
+        grid-auto-flow: row;
+        grid-auto-columns: minmax(0, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 10%;
+        padding-top: 10px;
+        clear: both;
+        dl {
+            color: var(--mlc-text-primary);
+            dt {
+                font-weight: 400;
+            }
+            dd {
+                font-size: 1.5rem;
+                font-weight: 600;
+            }
+        }
+    }
+    &.editing {
+        .module-content {
+            margin-top: 0;
+        }
+    }
+
+    @include media-breakpoint-down(md) {
+        .image-container {
+            flex-direction: row;
+            gap: 0.5rem;
+
+            .image {
+                margin-bottom: 0;
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+        .image-container {
+            flex-direction: column;
+        }
+        .module-content {
+            padding: 1rem 0;
+        }
+    }
+}
+
+.flash-messages {
+    .alert {
+        @include box-shadow(0 0 0 1px white);
+    }
+}
+
+.view-preview-container {
+  margin-top: 20px;
+}

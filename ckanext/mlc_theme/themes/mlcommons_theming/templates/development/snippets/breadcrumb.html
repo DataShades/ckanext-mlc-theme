@@ -1,0 +1,9 @@
+<div class="toolbar">
+    {%- call ui.util.call(ui.breadcrumb_wrapper) -%}
+        {{ ui.breadcrumb(_('Home'), h.url_for('home.index'), aria={"label": _("Home")}, initial=true) }}
+        {% if stage > 1 %}
+            {{ ui.breadcrumb(("Active " if stage == 2 else "") ~ "Breadcrumb Item", active=stage==2) }}
+        {% endif %}
+        {{ ui.breadcrumb("Active Breadcrumb Item", active=true) if stage > 2 }}
+    {%- endcall %}
+</div>

@@ -1,0 +1,11 @@
+{%- set items = (("First", true), ("Second", false), ("Third", true), ("Fourth", false), ("Last", false)) -%}
+
+<div class="filters">
+    {%- call ui.util.call(ui.facet_section, title=_("Facet List"), items=items) -%}
+        {%- call ui.util.call(ui.facet_list) -%}
+            {%- for value, active in items -%}
+                {{ ui.facet(value, active=active, count=range(150)|random) }}
+            {%- endfor %}
+        {%- endcall %}
+    {%- endcall %}
+</div>

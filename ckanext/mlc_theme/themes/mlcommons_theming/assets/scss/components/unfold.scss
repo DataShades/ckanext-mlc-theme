@@ -1,0 +1,211 @@
+$line-height: 48px;
+
+@mixin folder-icon($height: $line-height) {
+    display: inline-block;
+    width: $height;
+    height: $height;
+    background: url(../../../images/folder-icon.png) no-repeat center center;
+    background-size: contain;
+    text-indent: -9999px;
+    overflow: hidden;
+}
+
+@mixin file-icon($height: $line-height) {
+    display: inline-block;
+    width: 44px;
+    height: $line-height;
+    background: url(../../../base/images/sprite-resource-icons.png) no-repeat 0 0;
+    background-size: calc(7180px * 0.74) calc(300px * 0.74);
+    background-position: -15px -160px;
+    transform: scale(0.74);
+    text-indent: -9999px;
+    overflow: hidden;
+}
+
+@mixin file-icon-image($index) {
+    $icon-start-x: -15px;
+    $icon-step-x: 74px;
+    $icon-row-y: -160px;
+    $x: $icon-start-x - ($icon-step-x * ($index - 1));
+    background-position: $x $icon-row-y;
+}
+
+#archive-tree {
+    font-weight: bold;
+
+    .jstree-wholerow,
+    .jstree-anchor,
+    .jstree-icon {
+        line-height: $line-height;
+        height: $line-height;
+    }
+
+    .jstree-themeicon {
+        &:before {
+            content: unset;
+        }
+
+        &.fa-folder {
+            @include folder-icon;
+        }
+
+        &:not(.fa-folder) {
+            @include file-icon;
+            @include file-icon-image(18);
+        }
+
+        &.format-html {
+            @include file-icon-image(2);
+        }
+
+        &.format-json {
+            @include file-icon-image(3);
+        }
+
+        &.format-xml {
+            @include file-icon-image(4);
+        }
+
+        &.format-txt {
+            @include file-icon-image(5);
+        }
+
+        &.format-doc {
+            @include file-icon-image(6);
+        }
+
+        &.format-odt {
+            @include file-icon-image(7);
+        }
+
+        &.format-csv {
+            @include file-icon-image(8);
+        }
+
+        &.format-xls {
+            @include file-icon-image(9);
+        }
+
+        &.format-zip {
+            @include file-icon-image(10);
+        }
+
+        &.format-api {
+            @include file-icon-image(11);
+        }
+
+        &.format-pdf {
+            @include file-icon-image(12);
+        }
+
+        &.format-rdf {
+            @include file-icon-image(13);
+        }
+
+        &.format-wms {
+            @include file-icon-image(14);
+        }
+
+        &.format-png {
+            @include file-icon-image(15);
+        }
+
+        &.format-jpg {
+            @include file-icon-image(16);
+        }
+
+        &.format-gif {
+            @include file-icon-image(17);
+        }
+
+        &.format-data {
+            @include file-icon-image(18);
+        }
+
+        &.format-wfs {
+            @include file-icon-image(19);
+        }
+
+        &.format-gml {
+            @include file-icon-image(20);
+        }
+
+        &.format-wmts {
+            @include file-icon-image(21);
+        }
+
+        &.format-kml {
+            @include file-icon-image(22);
+        }
+
+        &.format-geo,
+        &.format-geojson {
+            @include file-icon-image(23);
+        }
+
+        &.format-tif {
+            @include file-icon-image(26);
+        }
+
+        &.format-parquet {
+            @include file-icon-image(24);
+        }
+
+        &.format-dbf {
+            @include file-icon-image(33);
+        }
+
+        &.format-pmtiles {
+            @include file-icon-image(27);
+        }
+
+        &.format-atx {
+            @include file-icon-image(28);
+        }
+
+        &.format-md {
+            @include file-icon-image(25);
+        }
+
+        &.format-fgb {
+            @include file-icon-image(29);
+        }
+
+        &.format-gpkg {
+            @include file-icon-image(32);
+        }
+
+        &.format-py {
+            @include file-icon-image(34);
+        }
+
+        &.format-ipynb {
+            @include file-icon-image(35);
+        }
+
+        &.format-gz {
+            @include file-icon-image(36);
+        }
+
+        &.format-shp {
+            @include file-icon-image(31);
+        }
+
+        &.format-shx {
+            @include file-icon-image(30);
+        }
+    }
+
+    .unfold-node-metadata {
+        font-weight: normal;
+    }
+}
+
+.ckanext-jstree-search {
+    .btn {
+        &:focus-visible {
+            border-color: var(--bs-primary);
+            border-width: 2px;
+        }
+    }
+}

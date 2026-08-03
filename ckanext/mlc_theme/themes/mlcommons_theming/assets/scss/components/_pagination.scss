@@ -1,0 +1,82 @@
+.pagination-wrapper {
+    text-align: center;
+    border-top: 1px solid $hr-color;
+    padding-top: math.div($grid-gutter-width, 3);
+
+    .pagination {
+        & > .disabled {
+            padding: 0 8px;
+            line-height: 29px;
+        }
+
+        .page-item {
+            margin: 0 4px;
+
+            .page-link {
+                border-radius: $pagination-border-radius;
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+.page-link {
+    background-color: var(--mlc-bg-primary);
+    border: 1px solid var(--mlc-border-default);
+    color: var(--mlc-accent-default);
+
+    &:hover {
+        background-color: var(--mlc-bg-tertiary);
+        border-color: var(--mlc-bg-tertiary);
+        color: var(--mlc-accent-default);
+    }
+
+    &:focus {
+        background-color: var(--mlc-bg-tertiary);
+        box-shadow: 0 0 0 0.25rem rgba(94, 80, 63, 0.25);
+    }
+
+    &.active,
+    .active>& {
+        z-index: 3;
+        color: var(--bs-white);
+        background-color: var(--mlc-accent-default);
+        border-color: var(--mlc-accent-default);
+    }
+
+    &.disabled,
+    .disabled>& {
+        color: var(--mlc-text-muted);
+        pointer-events: none;
+        background-color: var(--mlc-bg-secondary);
+        border-color: var(--mlc-bg-secondary);
+    }
+}
+
+.page-item {
+    &:not(:first-child) .page-link {
+        margin-left: $pagination-margin-start;
+    }
+
+    @if $pagination-margin-start ==calc(#{$pagination-border-width} * -1) {
+        &:first-child {
+            .page-link {
+                @include border-start-radius(var(--#{$prefix}pagination-border-radius));
+            }
+        }
+
+        &:last-child {
+            .page-link {
+                @include border-end-radius(var(--#{$prefix}pagination-border-radius));
+            }
+        }
+    }
+
+    @else {
+
+        // Add border-radius to all pageLinks in case they have left margin
+        .page-link {
+            @include border-radius(var(--#{$prefix}pagination-border-radius));
+        }
+    }
+}

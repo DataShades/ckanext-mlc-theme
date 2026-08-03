@@ -53,15 +53,22 @@ cd ckanext-mlc-theme
 pip install -e .
 ```
 
-### 2. Enable Plugins
+### 2. Enable main theme plugin
 Add both `theming` and `mlc_theme` to the `ckan.plugins` list in your `ckan.ini` file:
 
 ```ini
 ckan.plugins = ... theming mlc_theme
+
+ckan.ui.theme = mlcommons-theme
+ckan.ui.enable_theming_views = true
 ```
 
 > [!TIP]
 > Consider pinning `ckanext-theming` to a specific version (e.g. `ckanext-theming==X.Y.Z`) in your project's main requirements.
+
+### 3. Enable override plugin
+Add `mlc_theme_override` to the top of the `ckan.plugins` list in your `ckan.ini` file.
+This allows the theme to override third-party extension templates in a compatible way.
 
 ---
 

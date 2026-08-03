@@ -1,122 +1,80 @@
-[![Tests](https://github.com/DataShades/ckanext-mlc-theme/workflows/Tests/badge.svg?branch=main)](https://github.com/DataShades/ckanext-mlc-theme/actions)
+[![Tests](https://github.com/DataShades/ckanext-mlc-theme/actions/workflows/test.yml/badge.svg)](https://github.com/DataShades/ckanext-mlc-theme/actions/workflows/test.yml)
 
-# ckanext-mlc-theme
+MLCommons CKAN theme
+---
 
-**TODO:** Put a description of your extension here:  What does it do? What features does it have? Consider including some screenshots or embedding a video!
+This CKAN theme is designed to be used with the [ckanext-theming](https://github.com/DataShades/ckanext-theming) extension.
 
+It provides a consistent and visually appealing look and feel for the CKAN portal. Designed for the [MLCommons](https://mlcommons.org/) project.
 
-## Requirements
+## Compatibility
 
-**TODO:** For example, you might want to mention here which versions of CKAN this
-extension works with.
+| CKAN version | Compatible? |
+|---|---|
+| 2.11 and earlier | no |
+| 2.12 | yes |
 
-If your extension works across different versions you can add the following table:
+> [!NOTE]
+> This extension requires [ckanext-theming](https://github.com/DataShades/ckanext-theming) to run.
 
-Compatibility with core CKAN versions:
+---
 
-| CKAN version    | Compatible?   |
-| --------------- | ------------- |
-| 2.9 and earlier | not tested    |
-| 2.10            | not tested    |
-| 2.11            | not tested    |
+## Screenshots
 
-Suggested values:
+Below are placeholders for screenshots of the MLC theme in action:
 
-* "yes"
-* "not tested" - I can't think of a reason why it wouldn't work
-* "not yet" - there is an intention to get it working
-* "no"
+### Homepage
+![Homepage Mockup / Screenshot Placeholder](./doc/images/homepage.png)
 
+### Dataset Search / Registry page
+![Dataset Search Mockup / Screenshot Placeholder](./doc/images/search.png)
+
+### Dataset Detail page
+![Dataset Detail Mockup / Screenshot Placeholder](./doc/images/dataset.png)
+
+---
 
 ## Installation
 
-**TODO:** Add any additional install steps to the list below.
-   For example installing any non-Python dependencies or adding any required
-   config settings.
+### 1. Install the Extension
+Activate your CKAN virtual environment and install `ckanext-mlc-theme` and `ckanext-theming`:
 
-To install ckanext-mlc-theme:
+```sh
+pip install ckanext-theming
+# Install ckanext-mlc-theme from source or pip
+pip install -e .
+```
 
-1. Activate your CKAN virtual environment, for example:
+Or for development/source installation:
 
-     . /usr/lib/ckan/default/bin/activate
+```sh
+git clone https://github.com/DataShades/ckanext-mlc-theme.git
+cd ckanext-mlc-theme
+pip install -e .
+```
 
-2. Clone the source and install it on the virtualenv
+### 2. Enable Plugins
+Add both `theming` and `mlc_theme` to the `ckan.plugins` list in your `ckan.ini` file:
 
-    git clone https://github.com/DataShades/ckanext-mlc-theme.git
-    cd ckanext-mlc-theme
-    pip install -e .
-	pip install -r requirements.txt
+```ini
+ckan.plugins = ... theming mlc_theme
+```
 
-3. Add `mlc-theme` to the `ckan.plugins` setting in your CKAN
-   config file (by default the config file is located at
-   `/etc/ckan/default/ckan.ini`).
+> [!TIP]
+> Consider pinning `ckanext-theming` to a specific version (e.g. `ckanext-theming==X.Y.Z`) in your project's main requirements.
 
-4. Restart CKAN. For example if you've deployed CKAN with Apache on Ubuntu:
+---
 
-     sudo service apache2 reload
+## Development
 
+If you'd like to run the test suite, run:
 
-## Config settings
+```sh
+pytest
+```
 
-None at present
-
-**TODO:** Document any optional config settings here. For example:
-
-	# The minimum number of hours to wait before re-checking a resource
-	# (optional, default: 24).
-	ckanext.mlc_theme.some_setting = some_default_value
-
-
-## Developer installation
-
-To install ckanext-mlc-theme for development, activate your CKAN virtualenv and
-do:
-
-    git clone https://github.com/DataShades/ckanext-mlc-theme.git
-    cd ckanext-mlc-theme
-    pip install -e .
-    pip install -r dev-requirements.txt
-
-
-## Tests
-
-To run the tests, do:
-
-    pytest --ckan-ini=test.ini
-
-
-## Releasing a new version of ckanext-mlc-theme
-
-If ckanext-mlc-theme should be available on PyPI you can follow these steps to publish a new version:
-
-1. Update the version number in the `pyproject.toml` file. See [PEP 440](http://legacy.python.org/dev/peps/pep-0440/#public-version-identifiers) for how to choose version numbers.
-
-2. Make sure you have the latest version of necessary packages:
-
-    pip install --upgrade setuptools wheel twine
-
-3. Create a source and binary distributions of the new version:
-
-       python -m build && twine check dist/*
-
-   Fix any errors you get.
-
-4. Upload the source distribution to PyPI:
-
-       twine upload dist/*
-
-5. Commit any outstanding changes:
-
-       git commit -a
-       git push
-
-6. Tag the new release of the project on GitHub with the version number from
-   the `setup.py` file. For example if the version number in `setup.py` is
-   0.0.1 then do:
-
-       git tag 0.0.1
-       git push --tags
+---
 
 ## License
 
-[AGPL](https://www.gnu.org/licenses/agpl-3.0.en.html)
+[AGPL-3.0](https://www.gnu.org/licenses/agpl-3.0.en.html)

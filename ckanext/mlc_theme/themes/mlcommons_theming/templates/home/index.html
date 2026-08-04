@@ -27,7 +27,7 @@
                                     {% snippet 'home/snippets/search.html', search_facets=search_facets %}
                                 {% endblock %}
 
-                                {% set home_stats = h.get_homepage_counts() %}
+                                {% set home_stats = h.get_homepage_counts(g.user) %}
 
                                 <div class="d-flex gap-2 module-stats">
                                     <div class="col">

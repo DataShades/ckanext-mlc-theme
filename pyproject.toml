@@ -1,6 +1,6 @@
 [project]
 name = "ckanext-mlc-theme"
-version = "1.0.2"
+version = "1.0.3"
 description = "MLC theme"
 readme = "README.md"
 authors = [
@@ -18,6 +18,7 @@ classifiers = [
 keywords = [ "CKAN", "theme", ]
 dependencies = [
     "typing-extensions",
+    "cachetools",
 ]
 
 [project.urls]

@@ -1,9 +1,9 @@
-{% set groups = h.get_featured_groups(count=6) %}
+{% set groups = h.mlc_get_featured_groups(g.user, count=6) %}
 {{ ui.heading(_("Groups"), level=2) }}
 
 <ul class="featured-groups">
     {% for group in groups %}
-        {{ ui.group(group=group) }}
+        {{ ui.group(group=group, with_dataset_count=true) }}
     {% endfor %}
 </ul>
 <div>

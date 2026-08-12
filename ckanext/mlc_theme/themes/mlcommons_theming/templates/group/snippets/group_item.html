@@ -30,10 +30,12 @@ Example:
                             {{ ui.heading(group.display_name, level=3) }}
                         {% endblock %}
                         {% block datasets %}
-                            {% if group.package_count %}
-                                <span class="count">{{ ungettext('{num} Dataset', '{num} Datasets', group.package_count).format(num=group.package_count) }}</span>
-                            {% else %}
-                                <span class="count">{{ _('0 Datasets') }}</span>
+                            {% if with_dataset_count %}
+                                {% if group.package_count %}
+                                    <span class="count">{{ ungettext('{num} Dataset', '{num} Datasets', group.package_count).format(num=group.package_count) }}</span>
+                                {% else %}
+                                    <span class="count">{{ _('0 Datasets') }}</span>
+                                {% endif %}
                             {% endif %}
                         {% endblock %}
                         {% block members %}

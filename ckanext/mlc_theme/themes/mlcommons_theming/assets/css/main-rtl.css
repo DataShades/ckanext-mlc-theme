@@ -8550,6 +8550,9 @@ color:var(--mlc-text-muted)
 }.form-control:focus{
 border-color:var(--mlc-border-default);
 box-shadow:none
+}.form-control:read-only{
+opacity:.65;
+pointer-events:none
 }.form-narrow label{
 margin-bottom:0
 }.form-narrow select{
@@ -11058,6 +11061,8 @@ border-width:2px
 border-bottom-width:2px
 }.mlc-user-api-tokens #api-tokens-table .form-group{
 margin-bottom:0
+}.mlc-dataset-groups .groups-list .groups-cards .dataset-count{
+display:none
 }@media (min-width:576px){.wrapper:before{
 left:initial;
 right:0;

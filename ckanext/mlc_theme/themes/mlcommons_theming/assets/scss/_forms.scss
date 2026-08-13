@@ -188,6 +188,11 @@ form .control-medium .info-block.info-inline {
         border-color: var(--mlc-border-default);
         box-shadow: none;
     }
+
+    &:read-only {
+        opacity: 0.65;
+        pointer-events: none;
+    }
 }
 
 // Form Narrow

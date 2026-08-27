@@ -1,0 +1,9 @@
+{% ckan_extends %}
+
+{% block page_primary_action %}{% endblock %}
+
+{% block content_action %}
+    <div class="page_primary_action">
+    {{ h.snippet('snippets/add_source_button.html', dataset_type=c.dataset_type) }}
+    </div>
+{% endblock %}

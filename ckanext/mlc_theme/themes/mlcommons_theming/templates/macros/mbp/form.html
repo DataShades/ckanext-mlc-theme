@@ -351,14 +351,14 @@
                 data-module-previous_upload="{{ 'true' if previous_upload else 'false' }}">
         {% endif %}
 
-
         {{ ui.input(name=field_url, label=url_label, id='field-image-url', type='url', placeholder=placeholder, value=data.get(field_url), errors=errors.get(field_url)) }}
-
 
         {% if is_upload_enabled %}
             {{ ui.input(name=field_upload, label=upload_label, id='field-image-upload', type='file') }}
             {{ ui.checkbox(name=field_clear, label=_('Clear Upload'), id='field-clear-upload', value='true') if is_upload }}
         {% endif %}
+
+        {{ field_info(_('Actual bytes of the media object, for example the image file or video file.'))}}
 
         {% if is_upload_enabled %}</div>{% endif %}
     {% endif %}

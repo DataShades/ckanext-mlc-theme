@@ -8603,7 +8603,6 @@ height:auto;
 border-top:none;
 font-size:12px;
 line-height:18px;
-font-weight:500;
 color:var(--mlc-text-primary);
 background-color:var(--mlc-bg-secondary);
 gap:7px;
@@ -8759,6 +8758,11 @@ margin-right:3px
 background-color:var(--bs-white)!important
 }.control-full .select2-container{
 max-width:100%
+}.js .image-upload .form-group{
+margin-bottom:0
+}.js .image-upload .form-text{
+margin-top:20px;
+margin-bottom:30px
 }.js .image-upload #field-image-url{
 padding-right:90px
 }.js .image-upload #field-image-upload{

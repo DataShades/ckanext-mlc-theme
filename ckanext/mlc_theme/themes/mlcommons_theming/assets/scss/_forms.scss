@@ -278,7 +278,6 @@ select[data-module="autocomplete"] {
     border-top: none;
     font-size: 12px;
     line-height: 18px;
-    font-weight: 500;
     color: var(--mlc-text-primary);
     background-color: var(--mlc-bg-secondary);
     gap: 7px;
@@ -543,6 +542,15 @@ select[data-module="autocomplete"] {
 }
 
 .js .image-upload {
+    .form-group {
+        margin-bottom: 0;
+    }
+
+    .form-text {
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+
     #field-image-url {
         padding-right: 90px;
     }

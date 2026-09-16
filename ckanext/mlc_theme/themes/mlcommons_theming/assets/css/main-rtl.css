@@ -10832,6 +10832,27 @@ font-weight:400
 }.ckanext-jstree-search .btn:focus-visible{
 border-color:var(--bs-primary);
 border-width:2px
+}.unfold-preview-link::after{
+content:"Preview";
+display:inline-block;
+padding:.25em .5em;
+font-size:.75em;
+font-weight:400;
+line-height:1;
+color:#fff;
+background-color:var(--bs-primary);
+border-radius:4px;
+margin-left:auto
+}@media (min-width:768px){#followee-popover{
+float:right;
+margin-left:15px;
+width:max-content
+}.unfold-preview-link::after{
+position:absolute;
+right:260px
+}.masthead .navbar-collapse{
+float:left
+}
 }#admin-panel{
 font-family:var(--bs-body-font-family)
 }#admin-panel .navbar .nav-item{
@@ -11089,22 +11110,6 @@ float:right;
 padding-left:.5rem;
 color:#6c757d;
 content:var(--bs-breadcrumb-divider, "/")
-}@media (min-width:768px){#followee-popover{
-float:right;
-margin-left:15px;
-width:max-content
-}.masthead .navbar-collapse{
-float:left
-}.nav-aside li.active a:before,.nav-item.active>a:before{
-border-left:none;
-border-right:inherit;
-border-left-color:inherit;
-border-left-width:inherit;
-border-right-color:#667085;
-border-right-width:.25rem;
-left:-.25rem;
-right:inherit
-}
 }.masthead .main-navbar .site-search button{
 margin-right:-40px;
 margin-left:0
@@ -11115,6 +11120,19 @@ margin-right:initial;
 margin-left:20px
 }@media (min-width:992px){.masthead .site-search{
 margin-right:.75rem
+}
+}@media (min-width:768px){.nav-aside li.active a:before,.nav-item.active>a:before{
+border-left:none;
+border-right:inherit;
+border-left-color:inherit;
+border-left-width:inherit;
+border-right-color:#667085;
+border-right-width:.25rem;
+left:-.25rem;
+right:inherit
+}.homepage.layout-1 .row1 .col2{
+right:auto;
+left:0
 }
 }#dataset-resources,.additional-info,.breadcrumb,.context-info,.dataset-list,.flash-messages,.h1,.heading,.media-item,.module-heading,.module-item,.nav-item,.page_primary_action,.search-form,.tags,a,h1,p,td.dataset-details,th.dataset-label{
 direction:rtl;
@@ -11146,8 +11164,4 @@ float:right
 padding-right:0
 }.list-unstyled .nav-item a span.item-label,.nav-facet .nav-item a span.item-label,.nav-simple .nav-item a span.item-label{
 padding-right:15px
-}@media (min-width:768px){.homepage.layout-1 .row1 .col2{
-right:auto;
-left:0
-}
 }

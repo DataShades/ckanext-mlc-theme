@@ -222,3 +222,27 @@ $line-height: 48px;
         }
     }
 }
+
+// "Preview" badge for nested-file nodes ckanext-mlcommons's adapters mark as
+// previewable (see SourceCoopJSONAdapter._build_file_node). CSS-generated,
+// not markup in the node's text: ckanext-unfold renders entry names as plain
+// DOM text (jstree's `force_text`) to close a stored-XSS hole, so this can't
+// be a `<span>` concatenated into the name the way it used to be.
+.unfold-preview-link::after {
+    content: "Preview";
+    display: inline-block;
+    margin-left: 0.5rem;
+    padding: 0.25em 0.5em;
+    font-size: 0.75em;
+    font-weight: normal;
+    line-height: 1;
+    color: #fff;
+    background-color: var(--bs-primary);
+    border-radius: 4px;
+    margin-left: auto;
+
+    @media (min-width: 768px) {
+        position: absolute;
+        right: 260px;
+    }
+}

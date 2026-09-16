@@ -1,6 +1,6 @@
 [project]
 name = "ckanext-mlc-theme"
-version = "1.1.4
+version = "1.1.5"
 description = "MLC theme"
 readme = "README.md"
 authors = [

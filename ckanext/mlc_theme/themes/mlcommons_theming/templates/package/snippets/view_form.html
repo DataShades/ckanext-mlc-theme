@@ -2,19 +2,28 @@
 {% set errors = errors or {} %}
 
 {{ ui.form_errors(error_summary) }}
-
-{{ ui.input(name='title', label=_('Title'), placeholder=_('eg. My View'), value=data.title, errors=errors.title, required=true) }}
-{{ ui.markdown(name='description', label=_('Description'), placeholder=_('eg. Information about my view'), value=data.description, errors=errors.description) }}
 {{ ui.hidden_input(name='view_type', value=resource_view.view_type) }}
 
-{% block view_form_filters %}
-    {%- with resource=resource, resource_view=resource_view -%}
-        {% include 'package/snippets/view_form_filters.html' %}
-    {%- endwith %}
-{% endblock %}
+{% if resource_view.view_type in ("charts_view", "charts_builder_view") %}
+    {# charts_view and charts_builder_view render a self-contained widget
+       with its own title/description/filters, so the generic fields below
+       would just duplicate it (and duplicate the `title`/`description`
+       form field names). #}
+    {% if form_template %}
+        {% include form_template %}
+    {% endif %}
+{% else %}
+    {{ ui.input(name='title', label=_('Title'), placeholder=_('eg. My View'), value=data.title, errors=errors.title, required=true) }}
+    {{ ui.markdown(name='description', label=_('Description'), placeholder=_('eg. Information about my view'), value=data.description, errors=errors.description) }}
 
-{# form template is defined in ResouceView extension point #}
+    {% block view_form_filters %}
+        {%- with resource=resource, resource_view=resource_view -%}
+            {% include 'package/snippets/view_form_filters.html' %}
+        {%- endwith %}
+    {% endblock %}
 
-{% if form_template %}
-    {% include form_template %}
+    {# form template is defined in ResouceView extension point #}
+    {% if form_template %}
+        {% include form_template %}
+    {% endif %}
 {% endif %}

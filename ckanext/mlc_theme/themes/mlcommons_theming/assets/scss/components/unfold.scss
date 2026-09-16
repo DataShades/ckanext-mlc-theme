@@ -2,8 +2,9 @@ $line-height: 48px;
 
 @mixin folder-icon($height: $line-height) {
     display: inline-block;
-    width: $height;
-    height: $height;
+    width: $height !important;
+    height: $height !important;
+    line-height: $height !important;
     background: url(../../../images/folder-icon.png) no-repeat center center;
     background-size: contain;
     text-indent: -9999px;
@@ -12,8 +13,9 @@ $line-height: 48px;
 
 @mixin file-icon($height: $line-height) {
     display: inline-block;
-    width: 44px;
-    height: $line-height;
+    width: 44px !important;
+    height: $line-height !important;
+    line-height: $line-height !important;
     background: url(../../../base/images/sprite-resource-icons.png) no-repeat 0 0;
     background-size: calc(7180px * 0.74) calc(300px * 0.74);
     background-position: -15px -160px;
@@ -30,17 +32,28 @@ $line-height: 48px;
     background-position: $x $icon-row-y;
 }
 
-#archive-tree {
+.unf-tree,
+.unfold-search-results,
+.jstree-default {
     font-weight: bold;
 
     .jstree-wholerow,
     .jstree-anchor,
     .jstree-icon {
-        line-height: $line-height;
-        height: $line-height;
+        line-height: $line-height !important;
+        height: $line-height !important;
+
+        &.jstree-wholerow-hovered {
+            background: var(--mlc-bg-secondary) !important;
+        }
+
+        &.jstree-wholerow-clicked {
+            background: var(--mlc-bg-tertiary) !important;
+        }
     }
 
-    .jstree-themeicon {
+    .jstree-themeicon,
+    .unfold-result-icon {
         &:before {
             content: unset;
         }

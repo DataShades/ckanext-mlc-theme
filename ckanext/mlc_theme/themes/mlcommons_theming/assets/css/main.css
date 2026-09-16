@@ -10742,99 +10742,105 @@ background:#f1d7c4;
 margin-right:18px
 }.resource-item.resource-item--scp .item-text{
 margin-right:8px
-}#archive-tree{
+}.jstree-default,.unf-tree,.unfold-search-results{
 font-weight:700
-}#archive-tree .jstree-anchor,#archive-tree .jstree-icon,#archive-tree .jstree-wholerow{
-line-height:48px;
-height:48px
-}#archive-tree .jstree-themeicon:before{
+}.jstree-default .jstree-anchor,.jstree-default .jstree-icon,.jstree-default .jstree-wholerow,.unf-tree .jstree-anchor,.unf-tree .jstree-icon,.unf-tree .jstree-wholerow,.unfold-search-results .jstree-anchor,.unfold-search-results .jstree-icon,.unfold-search-results .jstree-wholerow{
+line-height:48px!important;
+height:48px!important
+}.jstree-default .jstree-anchor.jstree-wholerow-hovered,.jstree-default .jstree-icon.jstree-wholerow-hovered,.jstree-default .jstree-wholerow.jstree-wholerow-hovered,.unf-tree .jstree-anchor.jstree-wholerow-hovered,.unf-tree .jstree-icon.jstree-wholerow-hovered,.unf-tree .jstree-wholerow.jstree-wholerow-hovered,.unfold-search-results .jstree-anchor.jstree-wholerow-hovered,.unfold-search-results .jstree-icon.jstree-wholerow-hovered,.unfold-search-results .jstree-wholerow.jstree-wholerow-hovered{
+background:var(--mlc-bg-secondary)!important
+}.jstree-default .jstree-anchor.jstree-wholerow-clicked,.jstree-default .jstree-icon.jstree-wholerow-clicked,.jstree-default .jstree-wholerow.jstree-wholerow-clicked,.unf-tree .jstree-anchor.jstree-wholerow-clicked,.unf-tree .jstree-icon.jstree-wholerow-clicked,.unf-tree .jstree-wholerow.jstree-wholerow-clicked,.unfold-search-results .jstree-anchor.jstree-wholerow-clicked,.unfold-search-results .jstree-icon.jstree-wholerow-clicked,.unfold-search-results .jstree-wholerow.jstree-wholerow-clicked{
+background:var(--mlc-bg-tertiary)!important
+}.jstree-default .jstree-themeicon:before,.jstree-default .unfold-result-icon:before,.unf-tree .jstree-themeicon:before,.unf-tree .unfold-result-icon:before,.unfold-search-results .jstree-themeicon:before,.unfold-search-results .unfold-result-icon:before{
 content:unset
-}#archive-tree .jstree-themeicon.fa-folder{
+}.jstree-default .jstree-themeicon.fa-folder,.jstree-default .unfold-result-icon.fa-folder,.unf-tree .jstree-themeicon.fa-folder,.unf-tree .unfold-result-icon.fa-folder,.unfold-search-results .jstree-themeicon.fa-folder,.unfold-search-results .unfold-result-icon.fa-folder{
 display:inline-block;
-width:48px;
-height:48px;
+width:48px!important;
+height:48px!important;
+line-height:48px!important;
 background:url(../../../images/folder-icon.png) center center/contain no-repeat;
 text-indent:-9999px;
 overflow:hidden
-}#archive-tree .jstree-themeicon:not(.fa-folder){
+}.jstree-default .jstree-themeicon:not(.fa-folder),.jstree-default .unfold-result-icon:not(.fa-folder),.unf-tree .jstree-themeicon:not(.fa-folder),.unf-tree .unfold-result-icon:not(.fa-folder),.unfold-search-results .jstree-themeicon:not(.fa-folder),.unfold-search-results .unfold-result-icon:not(.fa-folder){
 display:inline-block;
-width:44px;
-height:48px;
+width:44px!important;
+height:48px!important;
+line-height:48px!important;
 background:url(../../../base/images/sprite-resource-icons.png) -1273px -160px/5313.2px 222px no-repeat;
 transform:scale(.74);
 text-indent:-9999px;
 overflow:hidden
-}#archive-tree .jstree-themeicon.format-html{
+}.jstree-default .jstree-themeicon.format-html,.jstree-default .unfold-result-icon.format-html,.unf-tree .jstree-themeicon.format-html,.unf-tree .unfold-result-icon.format-html,.unfold-search-results .jstree-themeicon.format-html,.unfold-search-results .unfold-result-icon.format-html{
 background-position:-89px -160px
-}#archive-tree .jstree-themeicon.format-json{
+}.jstree-default .jstree-themeicon.format-json,.jstree-default .unfold-result-icon.format-json,.unf-tree .jstree-themeicon.format-json,.unf-tree .unfold-result-icon.format-json,.unfold-search-results .jstree-themeicon.format-json,.unfold-search-results .unfold-result-icon.format-json{
 background-position:-163px -160px
-}#archive-tree .jstree-themeicon.format-xml{
+}.jstree-default .jstree-themeicon.format-xml,.jstree-default .unfold-result-icon.format-xml,.unf-tree .jstree-themeicon.format-xml,.unf-tree .unfold-result-icon.format-xml,.unfold-search-results .jstree-themeicon.format-xml,.unfold-search-results .unfold-result-icon.format-xml{
 background-position:-237px -160px
-}#archive-tree .jstree-themeicon.format-txt{
+}.jstree-default .jstree-themeicon.format-txt,.jstree-default .unfold-result-icon.format-txt,.unf-tree .jstree-themeicon.format-txt,.unf-tree .unfold-result-icon.format-txt,.unfold-search-results .jstree-themeicon.format-txt,.unfold-search-results .unfold-result-icon.format-txt{
 background-position:-311px -160px
-}#archive-tree .jstree-themeicon.format-doc{
+}.jstree-default .jstree-themeicon.format-doc,.jstree-default .unfold-result-icon.format-doc,.unf-tree .jstree-themeicon.format-doc,.unf-tree .unfold-result-icon.format-doc,.unfold-search-results .jstree-themeicon.format-doc,.unfold-search-results .unfold-result-icon.format-doc{
 background-position:-385px -160px
-}#archive-tree .jstree-themeicon.format-odt{
+}.jstree-default .jstree-themeicon.format-odt,.jstree-default .unfold-result-icon.format-odt,.unf-tree .jstree-themeicon.format-odt,.unf-tree .unfold-result-icon.format-odt,.unfold-search-results .jstree-themeicon.format-odt,.unfold-search-results .unfold-result-icon.format-odt{
 background-position:-459px -160px
-}#archive-tree .jstree-themeicon.format-csv{
+}.jstree-default .jstree-themeicon.format-csv,.jstree-default .unfold-result-icon.format-csv,.unf-tree .jstree-themeicon.format-csv,.unf-tree .unfold-result-icon.format-csv,.unfold-search-results .jstree-themeicon.format-csv,.unfold-search-results .unfold-result-icon.format-csv{
 background-position:-533px -160px
-}#archive-tree .jstree-themeicon.format-xls{
+}.jstree-default .jstree-themeicon.format-xls,.jstree-default .unfold-result-icon.format-xls,.unf-tree .jstree-themeicon.format-xls,.unf-tree .unfold-result-icon.format-xls,.unfold-search-results .jstree-themeicon.format-xls,.unfold-search-results .unfold-result-icon.format-xls{
 background-position:-607px -160px
-}#archive-tree .jstree-themeicon.format-zip{
+}.jstree-default .jstree-themeicon.format-zip,.jstree-default .unfold-result-icon.format-zip,.unf-tree .jstree-themeicon.format-zip,.unf-tree .unfold-result-icon.format-zip,.unfold-search-results .jstree-themeicon.format-zip,.unfold-search-results .unfold-result-icon.format-zip{
 background-position:-681px -160px
-}#archive-tree .jstree-themeicon.format-api{
+}.jstree-default .jstree-themeicon.format-api,.jstree-default .unfold-result-icon.format-api,.unf-tree .jstree-themeicon.format-api,.unf-tree .unfold-result-icon.format-api,.unfold-search-results .jstree-themeicon.format-api,.unfold-search-results .unfold-result-icon.format-api{
 background-position:-755px -160px
-}#archive-tree .jstree-themeicon.format-pdf{
+}.jstree-default .jstree-themeicon.format-pdf,.jstree-default .unfold-result-icon.format-pdf,.unf-tree .jstree-themeicon.format-pdf,.unf-tree .unfold-result-icon.format-pdf,.unfold-search-results .jstree-themeicon.format-pdf,.unfold-search-results .unfold-result-icon.format-pdf{
 background-position:-829px -160px
-}#archive-tree .jstree-themeicon.format-rdf{
+}.jstree-default .jstree-themeicon.format-rdf,.jstree-default .unfold-result-icon.format-rdf,.unf-tree .jstree-themeicon.format-rdf,.unf-tree .unfold-result-icon.format-rdf,.unfold-search-results .jstree-themeicon.format-rdf,.unfold-search-results .unfold-result-icon.format-rdf{
 background-position:-903px -160px
-}#archive-tree .jstree-themeicon.format-wms{
+}.jstree-default .jstree-themeicon.format-wms,.jstree-default .unfold-result-icon.format-wms,.unf-tree .jstree-themeicon.format-wms,.unf-tree .unfold-result-icon.format-wms,.unfold-search-results .jstree-themeicon.format-wms,.unfold-search-results .unfold-result-icon.format-wms{
 background-position:-977px -160px
-}#archive-tree .jstree-themeicon.format-png{
+}.jstree-default .jstree-themeicon.format-png,.jstree-default .unfold-result-icon.format-png,.unf-tree .jstree-themeicon.format-png,.unf-tree .unfold-result-icon.format-png,.unfold-search-results .jstree-themeicon.format-png,.unfold-search-results .unfold-result-icon.format-png{
 background-position:-1051px -160px
-}#archive-tree .jstree-themeicon.format-jpg{
+}.jstree-default .jstree-themeicon.format-jpg,.jstree-default .unfold-result-icon.format-jpg,.unf-tree .jstree-themeicon.format-jpg,.unf-tree .unfold-result-icon.format-jpg,.unfold-search-results .jstree-themeicon.format-jpg,.unfold-search-results .unfold-result-icon.format-jpg{
 background-position:-1125px -160px
-}#archive-tree .jstree-themeicon.format-gif{
+}.jstree-default .jstree-themeicon.format-gif,.jstree-default .unfold-result-icon.format-gif,.unf-tree .jstree-themeicon.format-gif,.unf-tree .unfold-result-icon.format-gif,.unfold-search-results .jstree-themeicon.format-gif,.unfold-search-results .unfold-result-icon.format-gif{
 background-position:-1199px -160px
-}#archive-tree .jstree-themeicon.format-data{
+}.jstree-default .jstree-themeicon.format-data,.jstree-default .unfold-result-icon.format-data,.unf-tree .jstree-themeicon.format-data,.unf-tree .unfold-result-icon.format-data,.unfold-search-results .jstree-themeicon.format-data,.unfold-search-results .unfold-result-icon.format-data{
 background-position:-1273px -160px
-}#archive-tree .jstree-themeicon.format-wfs{
+}.jstree-default .jstree-themeicon.format-wfs,.jstree-default .unfold-result-icon.format-wfs,.unf-tree .jstree-themeicon.format-wfs,.unf-tree .unfold-result-icon.format-wfs,.unfold-search-results .jstree-themeicon.format-wfs,.unfold-search-results .unfold-result-icon.format-wfs{
 background-position:-1347px -160px
-}#archive-tree .jstree-themeicon.format-gml{
+}.jstree-default .jstree-themeicon.format-gml,.jstree-default .unfold-result-icon.format-gml,.unf-tree .jstree-themeicon.format-gml,.unf-tree .unfold-result-icon.format-gml,.unfold-search-results .jstree-themeicon.format-gml,.unfold-search-results .unfold-result-icon.format-gml{
 background-position:-1421px -160px
-}#archive-tree .jstree-themeicon.format-wmts{
+}.jstree-default .jstree-themeicon.format-wmts,.jstree-default .unfold-result-icon.format-wmts,.unf-tree .jstree-themeicon.format-wmts,.unf-tree .unfold-result-icon.format-wmts,.unfold-search-results .jstree-themeicon.format-wmts,.unfold-search-results .unfold-result-icon.format-wmts{
 background-position:-1495px -160px
-}#archive-tree .jstree-themeicon.format-kml{
+}.jstree-default .jstree-themeicon.format-kml,.jstree-default .unfold-result-icon.format-kml,.unf-tree .jstree-themeicon.format-kml,.unf-tree .unfold-result-icon.format-kml,.unfold-search-results .jstree-themeicon.format-kml,.unfold-search-results .unfold-result-icon.format-kml{
 background-position:-1569px -160px
-}#archive-tree .jstree-themeicon.format-geo,#archive-tree .jstree-themeicon.format-geojson{
+}.jstree-default .jstree-themeicon.format-geo,.jstree-default .jstree-themeicon.format-geojson,.jstree-default .unfold-result-icon.format-geo,.jstree-default .unfold-result-icon.format-geojson,.unf-tree .jstree-themeicon.format-geo,.unf-tree .jstree-themeicon.format-geojson,.unf-tree .unfold-result-icon.format-geo,.unf-tree .unfold-result-icon.format-geojson,.unfold-search-results .jstree-themeicon.format-geo,.unfold-search-results .jstree-themeicon.format-geojson,.unfold-search-results .unfold-result-icon.format-geo,.unfold-search-results .unfold-result-icon.format-geojson{
 background-position:-1643px -160px
-}#archive-tree .jstree-themeicon.format-tif{
+}.jstree-default .jstree-themeicon.format-tif,.jstree-default .unfold-result-icon.format-tif,.unf-tree .jstree-themeicon.format-tif,.unf-tree .unfold-result-icon.format-tif,.unfold-search-results .jstree-themeicon.format-tif,.unfold-search-results .unfold-result-icon.format-tif{
 background-position:-1865px -160px
-}#archive-tree .jstree-themeicon.format-parquet{
+}.jstree-default .jstree-themeicon.format-parquet,.jstree-default .unfold-result-icon.format-parquet,.unf-tree .jstree-themeicon.format-parquet,.unf-tree .unfold-result-icon.format-parquet,.unfold-search-results .jstree-themeicon.format-parquet,.unfold-search-results .unfold-result-icon.format-parquet{
 background-position:-1717px -160px
-}#archive-tree .jstree-themeicon.format-dbf{
+}.jstree-default .jstree-themeicon.format-dbf,.jstree-default .unfold-result-icon.format-dbf,.unf-tree .jstree-themeicon.format-dbf,.unf-tree .unfold-result-icon.format-dbf,.unfold-search-results .jstree-themeicon.format-dbf,.unfold-search-results .unfold-result-icon.format-dbf{
 background-position:-2383px -160px
-}#archive-tree .jstree-themeicon.format-pmtiles{
+}.jstree-default .jstree-themeicon.format-pmtiles,.jstree-default .unfold-result-icon.format-pmtiles,.unf-tree .jstree-themeicon.format-pmtiles,.unf-tree .unfold-result-icon.format-pmtiles,.unfold-search-results .jstree-themeicon.format-pmtiles,.unfold-search-results .unfold-result-icon.format-pmtiles{
 background-position:-1939px -160px
-}#archive-tree .jstree-themeicon.format-atx{
+}.jstree-default .jstree-themeicon.format-atx,.jstree-default .unfold-result-icon.format-atx,.unf-tree .jstree-themeicon.format-atx,.unf-tree .unfold-result-icon.format-atx,.unfold-search-results .jstree-themeicon.format-atx,.unfold-search-results .unfold-result-icon.format-atx{
 background-position:-2013px -160px
-}#archive-tree .jstree-themeicon.format-md{
+}.jstree-default .jstree-themeicon.format-md,.jstree-default .unfold-result-icon.format-md,.unf-tree .jstree-themeicon.format-md,.unf-tree .unfold-result-icon.format-md,.unfold-search-results .jstree-themeicon.format-md,.unfold-search-results .unfold-result-icon.format-md{
 background-position:-1791px -160px
-}#archive-tree .jstree-themeicon.format-fgb{
+}.jstree-default .jstree-themeicon.format-fgb,.jstree-default .unfold-result-icon.format-fgb,.unf-tree .jstree-themeicon.format-fgb,.unf-tree .unfold-result-icon.format-fgb,.unfold-search-results .jstree-themeicon.format-fgb,.unfold-search-results .unfold-result-icon.format-fgb{
 background-position:-2087px -160px
-}#archive-tree .jstree-themeicon.format-gpkg{
+}.jstree-default .jstree-themeicon.format-gpkg,.jstree-default .unfold-result-icon.format-gpkg,.unf-tree .jstree-themeicon.format-gpkg,.unf-tree .unfold-result-icon.format-gpkg,.unfold-search-results .jstree-themeicon.format-gpkg,.unfold-search-results .unfold-result-icon.format-gpkg{
 background-position:-2309px -160px
-}#archive-tree .jstree-themeicon.format-py{
+}.jstree-default .jstree-themeicon.format-py,.jstree-default .unfold-result-icon.format-py,.unf-tree .jstree-themeicon.format-py,.unf-tree .unfold-result-icon.format-py,.unfold-search-results .jstree-themeicon.format-py,.unfold-search-results .unfold-result-icon.format-py{
 background-position:-2457px -160px
-}#archive-tree .jstree-themeicon.format-ipynb{
+}.jstree-default .jstree-themeicon.format-ipynb,.jstree-default .unfold-result-icon.format-ipynb,.unf-tree .jstree-themeicon.format-ipynb,.unf-tree .unfold-result-icon.format-ipynb,.unfold-search-results .jstree-themeicon.format-ipynb,.unfold-search-results .unfold-result-icon.format-ipynb{
 background-position:-2531px -160px
-}#archive-tree .jstree-themeicon.format-gz{
+}.jstree-default .jstree-themeicon.format-gz,.jstree-default .unfold-result-icon.format-gz,.unf-tree .jstree-themeicon.format-gz,.unf-tree .unfold-result-icon.format-gz,.unfold-search-results .jstree-themeicon.format-gz,.unfold-search-results .unfold-result-icon.format-gz{
 background-position:-2605px -160px
-}#archive-tree .jstree-themeicon.format-shp{
+}.jstree-default .jstree-themeicon.format-shp,.jstree-default .unfold-result-icon.format-shp,.unf-tree .jstree-themeicon.format-shp,.unf-tree .unfold-result-icon.format-shp,.unfold-search-results .jstree-themeicon.format-shp,.unfold-search-results .unfold-result-icon.format-shp{
 background-position:-2235px -160px
-}#archive-tree .jstree-themeicon.format-shx{
+}.jstree-default .jstree-themeicon.format-shx,.jstree-default .unfold-result-icon.format-shx,.unf-tree .jstree-themeicon.format-shx,.unf-tree .unfold-result-icon.format-shx,.unfold-search-results .jstree-themeicon.format-shx,.unfold-search-results .unfold-result-icon.format-shx{
 background-position:-2161px -160px
-}#archive-tree .unfold-node-metadata{
+}.jstree-default .unfold-node-metadata,.unf-tree .unfold-node-metadata,.unfold-search-results .unfold-node-metadata{
 font-weight:400
 }.ckanext-jstree-search .btn:focus-visible{
 border-color:var(--bs-primary);

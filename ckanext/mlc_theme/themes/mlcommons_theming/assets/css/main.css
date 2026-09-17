@@ -8550,7 +8550,7 @@ color:var(--mlc-text-muted)
 }.form-control:focus{
 border-color:var(--mlc-border-default);
 box-shadow:none
-}.form-control:read-only{
+}.form-control[readonly]{
 opacity:.65;
 pointer-events:none
 }.form-narrow label{

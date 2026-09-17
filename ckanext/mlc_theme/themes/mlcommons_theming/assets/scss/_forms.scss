@@ -189,7 +189,11 @@ form .control-medium .info-block.info-inline {
         box-shadow: none;
     }
 
-    &:read-only {
+    // NOTE: use the attribute selector instead of the `:read-only` pseudo-class.
+    // `:read-only` also matches inputs that are never editable by nature
+    // (file, checkbox, radio, select), which disabled the hidden file input
+    // that the `image-upload` module overlays on top of its Upload button.
+    &[readonly] {
         opacity: 0.65;
         pointer-events: none;
     }
